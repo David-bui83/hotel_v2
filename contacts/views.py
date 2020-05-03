@@ -9,15 +9,7 @@ def contact(request):
 def message(request):
   
   if request.method == 'POST':
-  #   try:
-  #     name = request.POST['name']
-  #     email = request.POST['email']
-  #     message = request.POST['message']
-  #   except:
-  #     name = ''
-  #     email = ''
-  #     message = ''
-  #   finally:
+
     errors = Message.objects.basic_validator(request.POST)
     print(errors)
 
@@ -26,5 +18,7 @@ def message(request):
         messages.error(request, value)
         
         return redirect('contact')
-      
+    else:
+      value = 'Your message was received'
+      messages.success(request, value)  
   return redirect('contact')
