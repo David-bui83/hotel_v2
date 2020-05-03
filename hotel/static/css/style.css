@@ -10,6 +10,7 @@ html,body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7em;
 }
+
 a {
   color: #333;
   text-decoration: none;
@@ -272,11 +273,13 @@ p {
   padding: 20px;
 }
 
+/* Message */ 
 ul.messages li.success {
-  color: green;
+  color: #008000;
   list-style-type: none;
 }
+
 ul.messages li.danger {
-  color: red;
+  color: #ff0000;
   list-style-type: none;
 }

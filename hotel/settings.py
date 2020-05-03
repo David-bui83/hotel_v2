@@ -77,8 +77,11 @@ WSGI_APPLICATION = 'hotel.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql', # Using postgressql database
+        'NAME': 'hotel',
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'HOST': 'localhost'
     }
 }
 
@@ -131,3 +134,10 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
     messages.SUCCESS: 'success'
 }
+
+# Email config
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_SSL = True
