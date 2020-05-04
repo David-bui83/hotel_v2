@@ -9,8 +9,10 @@
   <div class="container">
     <div class="info-left">
       <h1 class="l-heading"><span class="text-primary">About</span> Hotel BT</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eveniet consequuntur reprehenderit optio a! Blanditiis officia pariatur eius. Ab magni beatae dolore quis saepe error quia rerum quod quo repellat.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sapiente aliquam quae iusto enim amet error ipsa debitis, numquam perferendis!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eveniet consequuntur reprehenderit optio a!
+        Blanditiis officia pariatur eius. Ab magni beatae dolore quis saepe error quia rerum quod quo repellat.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et sapiente aliquam quae iusto enim amet error ipsa
+        debitis, numquam perferendis!</p>
     </div>
     <div class="info-right">
       <img src="{% static './img/photo-2.jpg' %}" alt="Hotel">
@@ -25,13 +27,21 @@
     <h2 class="l-heading">What Our Guests Say</h2>
     <div class="testimonial bg-primary">
       <img src="{% static './img/person-1.jpg' %}" alt="Samantha">
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit culpa cupiditate consequatur eaque enim consectetur magni iste rem fuga, ut aspernatur minima optio tenetur? Quo tempore alias officia perspiciatis doloremque, laudantium voluptatum tenetur expedita delectus, quod, dolore autem ea? Rem.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit culpa cupiditate consequatur eaque enim
+        consectetur magni iste rem fuga, ut aspernatur minima optio tenetur? Quo tempore alias officia perspiciatis
+        doloremque, laudantium voluptatum tenetur expedita delectus, quod, dolore autem ea? Rem.</p>
     </div>
 
     <div class="testimonial bg-primary">
-        <img src="{% static './img/person-2.jpg' %}" alt="Jen">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non hic aperiam, amet voluptatum sed error vitae necessitatibus omnis molestiae possimus fugiat mollitia distinctio corrupti et, dolor, eligendi ratione nostrum esse ullam quo dolore quis atque earum cumque. Repellendus, nam atque.</p>
-      </div>
+      <img src="{% static './img/person-2.jpg' %}" alt="Jen">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non hic aperiam, amet voluptatum sed error vitae
+        necessitatibus omnis molestiae possimus fugiat mollitia distinctio corrupti et, dolor, eligendi ratione nostrum
+        esse ullam quo dolore quis atque earum cumque. Repellendus, nam atque.</p>
+    </div>
+
+    <div class="testimonial-btn">
+      <a class="btn" href="{% url 'testimonial' %}">View More</a>
+    </div>
   </div>
 </section>
 {% endblock %}

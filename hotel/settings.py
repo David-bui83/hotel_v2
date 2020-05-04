@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'pages.apps.PagesConfig', # Adding pages app
     'contacts.apps.ContactsConfig', # Adding contacts app
+    'testimonials.apps.TestimonialsConfig', # Adding testimonials app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

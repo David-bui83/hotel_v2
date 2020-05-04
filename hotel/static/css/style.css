@@ -242,6 +242,49 @@ p {
   border-radius: 50%;
 }
 
+#testimonials .testimonial-btn {
+  text-align: center;
+}
+
+/* Leave a testimonial */ 
+
+#leave-testimony {
+  background-color: #333;
+  color: #fff;
+}
+
+#leave-testimony .container h2.l-heading{
+  text-align: center;
+}
+
+
+/* Testimonial Form */
+#leave-testimony .form-group {
+  margin-bottom: 20px;
+}
+
+#leave-testimony label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#leave-testimony input, 
+#leave-testimony textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px #ddd solid;
+} 
+
+#leave-testimony input#img {
+  background-color: #fff;
+}
+
+#leave-testimony input:focus, 
+#leave-testimony textarea:focus {
+  outline: none;
+  border-color: #f7c08a;
+}
+
 /* Contact Form */
 #contact-form .form-group {
   margin-bottom: 20px;
