@@ -1,0 +1,33 @@
+#header {
+  height: 50px; 
+  background: #444;
+  color: #fff;
+}
+
+a:link,
+a:visited {
+  color: #444;
+}
+
+div.breadcrumbs {
+  background-color: #333;
+}
+
+div.breadcrumbs a {
+  color: #f7c08a;
+}
+
+.module h2, .module caption, .inline-group h2 {
+  background-color: #444;
+}
+
+input[type='submit'], input[type='submit'].default {
+  background-color: #444;
+}
+
+input[type='submit']:hover, input[type='submit'].default:hover {
+  background-color: #333;
+  color: #f7c08a;
+}
+
+

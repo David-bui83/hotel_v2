@@ -1,10 +1,17 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
 from .models import Testimonial
+import imghdr
 import os 
 # Create your views here.
 def testimonial(request):
-  return render(request, 'testimonials/testimonials.html')
+
+  testimonials = Testimonial.objects.all().order_by('-id')
+  context = {
+    'tests': testimonials
+  }
+
+  return render(request, 'testimonials/testimonials.html', context)
 
 def add_testimonial(request):
   if request.method == 'POST':
@@ -25,10 +32,18 @@ def add_testimonial(request):
         'img': request.FILES['img'],
         'message': request.POST['message']
       }
-    
-      img = postData['img'].name.split('.')
-      if img[0] != 'jpg' or img[0] != 'png':
+
+      img = imghdr.what(postData['img'])
+      print('img type', img)
+      # img = postData['img'].name.split('.')
+      # print(img)
+      if not img:
         messages.error(request, 'Not a valid Image')
         return redirect('testimonial')
+      else:
+        Testimonial.objects.create(name=postData['name'],email=postData['email'],img=postData['img'],testimonial=postData['message'])
+        messages.success(request, 'Successfully added your testimony')
+        return redirect('testimonial')
+
 
   return redirect('testimonial')

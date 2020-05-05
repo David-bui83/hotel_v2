@@ -24,7 +24,7 @@ class TestimonialManager(models.Manager):
 class Testimonial(models.Model):
   name = models.CharField(max_length=100)
   email = models.CharField(max_length=100)
-  img = models.ImageField(blank=True)
+  img = models.ImageField(upload_to='photos/%Y/%m/%d/',blank=True)
   testimonial = models.TextField(blank=True)
   created_at = models.DateTimeField(auto_now_add=True)
   updated_at = models.DateTimeField(auto_now=True)

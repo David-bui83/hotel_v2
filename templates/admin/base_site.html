@@ -1,0 +1,16 @@
+<!-- Changing admin templates -->
+{% extends 'admin/base.html' %}
+
+{% load static %}
+
+<!-- Changing admin templates -->
+{% block branding %}
+<h1 id="heading">
+  <span class="text-primary">HOTEL</span>
+</h1>
+{% endblock %}
+
+<!-- Changing admin templates -->
+{% block extrastyle %}
+  <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock %}
