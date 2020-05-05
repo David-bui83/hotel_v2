@@ -3,10 +3,12 @@ from django.contrib import messages
 from .models import Testimonial
 import imghdr
 import os 
+
 # Create your views here.
 def testimonial(request):
 
   testimonials = Testimonial.objects.all().order_by('-id')
+  
   context = {
     'tests': testimonials
   }
